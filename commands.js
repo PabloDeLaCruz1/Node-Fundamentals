@@ -1,5 +1,5 @@
-const { log } = require("console");
 let fs = require("fs")
+const request = require('request');
 
 
 let commands = {
@@ -21,6 +21,9 @@ let commands = {
     },
     echo: (data) => {
         process.stdout.write(data.slice(1).join(" ").toString());
+    },
+    curl: () => {
+
     }
 }
 

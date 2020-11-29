@@ -8,7 +8,7 @@ process.stdin.on('data', function (data) {
     dataArr = data.toString().trim().split(" ");
     cmd = dataArr[0]
 
-    if(dataArr[0] === "echo"){
+    if(dataArr.length > 1){
         commands[cmd](dataArr);
     }else{
         commands[cmd]();
