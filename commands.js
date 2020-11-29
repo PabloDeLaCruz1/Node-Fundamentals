@@ -5,6 +5,9 @@ let commands = {
     date: () => {
         var date = new Date();
        return process.stdout.write(date.toString());
+    },
+    ls: () => {
+        
     }
 }
 
