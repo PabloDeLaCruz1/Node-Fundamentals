@@ -2,7 +2,7 @@ let commands = require("./commands").commands
 
 // Output a prompt
 process.stdout.write('prompt > ');
-var cmd
+let cmd
 // The stdin 'data' event fires after a user types in a line
 process.stdin.on('data', function (data) {
     dataArr = data.toString().trim().split(" ");
@@ -18,3 +18,8 @@ process.stdin.on('data', function (data) {
 });
 
 
+//Refactoring
+let done = function(output) {
+    // show the output
+    // show the prompt
+  }
