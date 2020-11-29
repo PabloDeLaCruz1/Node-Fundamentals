@@ -1,3 +1,4 @@
+const { log } = require("console");
 let fs = require("fs")
 
 
@@ -7,16 +8,19 @@ let commands = {
     },
     date: () => {
         var date = new Date();
-       return process.stdout.write(date.toString());
+        return process.stdout.write(date.toString());
     },
     ls: () => {
-        fs.readdir('.', function(err, files) {
+        //can use readdirSync but this is good practice
+        fs.readdir('.', function (err, files) {
             if (err) throw err;
-            files.forEach(function(file) {
-              process.stdout.write(file.toString() + "\n");
+            files.forEach(function (file) {
+                process.stdout.write(file.toString() + "\n");
             })
-            process.stdout.write("prompt > ");
-          });
+        });
+    },
+    echo: (data) => {
+        process.stdout.write(data.slice(1).join(" ").toString());
     }
 }
 
