@@ -1,5 +1,4 @@
 let commands = require("./commands").commands
-
 console.log(commands);
 // Output a prompt
 process.stdout.write('prompt > ');
